@@ -1,0 +1,80 @@
+/*
+oddbox grey: background-color: #ECECEC or rgb(236,236,236);
+oddbox grey highlight: #D8D8D8
+oddbox blueish: #42369B or rgb(66,54,155);
+card back grey(it's actually a cloud render type thing in TTS): #958F89 or rgb(149,143,137);
+*/
+body {
+	font-family: "Roboto", "Arial", monospace;
+	margin: 0 auto;
+	padding: 10px 20px;
+	max-width: 850px;
+	min-width: 550px;
+	text-align: center;
+	color: black;
+	background-image: url(images/background-image.jpg);
+}
+
+header{
+	padding-top: 10px;
+	background-color: rgb(236,236,236);
+	border-radius: 5px;
+}
+
+footer{
+	padding: 10px;
+	background-color: rgb(236,236,236);
+	text-align: right;
+}
+
+nav{
+	background-color: #D8D8D8;
+	padding: 10px;
+	border-radius: 5px;
+}
+nav a{
+	text-decoration: none;
+	padding: 5px;
+	text-align: center;
+}
+nav a:hover{
+	color: white;
+	background-color: #42369B;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+nav a.active{
+	background-color: #958F89;
+}
+
+p{
+	background-color: #ECECEC;
+	padding: 10px;
+	text-align: left;
+	margin: auto;
+}
+
+.pageHeading{
+	color: #42369B;
+	background-color: #ECECEC;
+	padding: 10px;
+}
+
+div{
+	background-color: #ECECEC;
+	padding: 10px;
+	color: inherit ;
+	text-align: center;
+	margin: auto;
+}
+
+.linkButton{
+	color: white;
+	background-color: #42369B;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 2px 5px 2px 5px;
+	border-radius: 5px;
+}
