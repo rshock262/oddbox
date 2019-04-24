@@ -31,6 +31,7 @@ nav{
 	background-color: #D8D8D8;
 	padding: 10px;
 	border-radius: 5px;
+	font-weight: bold;
 }
 nav a{
 	text-decoration: none;
@@ -42,7 +43,6 @@ nav a:hover{
 	background-color: #42369B;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-weight: bold;
 }
 
 nav a.active{
@@ -70,11 +70,21 @@ div{
 	margin: auto;
 }
 
-.linkButton{
+div > .linkButton{
 	color: white;
 	background-color: #42369B;
 	font-weight: bold;
 	text-decoration: none;
 	padding: 2px 5px 2px 5px;
 	border-radius: 5px;
+	text-align: center;
+}
+
+.cycle-slideshow{
+	width: 33%;
+	margin: 0 auto;
+}
+
+#embeddedTweet{
+	padding-left: 20%;
 }

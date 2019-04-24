@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>Terrible Lizards - OddBox Games</title>
 		<link rel="stylesheet" href="master.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://malsup.github.io/jquery.cycle2.js"></script>
+		<script src="terrible-lizards.js"></script>
 	</head>
 	<body>
 			<header>
@@ -23,6 +26,21 @@
 				<img src="images/relentless.png" alt="Flying Dino">
 			</div>
 			<div>
+			<div class="cycle-slideshow"
+				data-cycle-fx="scrollHorz"
+				data-cycle-speed="200"
+				data-cycle-timeout="2000"
+				data-cycle-pause-on-hover="true"
+				data-cycle-center-horz=true
+				data-cycle-center-vert=true
+				>
+
+				<img src="images/cardback.png" height="350" width="270" alt="card back">
+				<img src="images/build-dozer.png" height="350" width="270" alt="build dozer">
+				<img src="images/rapid-evo.png" height="350" width="270" alt="rapid evolution">
+			</div>
+		</div>
+			<div>
 				<p>
 				The dinosaurs are the greatest tragedy the world has ever known. For
 				millions of years, the reptilian titans ruled the earth, crushing any
@@ -40,9 +58,9 @@
 				All you need is the game and some friends to play with! The game is
 				entirely self contained, with over a dozen dinosaurs and tons of crazy
 				effects. Team up with your friends, or take them down! You can get some
-				more information on our Kickstarter, or check out the full instructions
-				over <a href="how-to-play.html" class ="linkButton">here</a>.
+				more information on our Kickstarter.
 				</p>
+					<a href="how-to-play.html" class ="linkButton">Check the full instructions here!</a>.
 			</div>
 		</main>
 		<footer>

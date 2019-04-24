@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>How-to-play</title>
-		<link rel="stylesheet" href="master.css" />
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="master.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="how-to-play.js"></script>
 	</head>
 	<body>
 			<header>
@@ -17,9 +21,160 @@
 				</nav>
 			</header>
 		<main>
-			<div>
-				<h2>Interactive rules coming soon!</h2>
-				<embed src="terriblerules.pdf" width="800" height = "1000" type = "application/pdf">
+			<div id="accordion">
+				<h3>Beginning the game</h3>
+				<div>
+				<p>
+					Each player is dealt a five card hand. The cards in your hand are secret; don’t show them to
+					other players. Once the cards are dealt, choose someone to go first. Play then proceeds in
+					clockwise order. Each player starts with fifty health. When your health reaches zero, your
+					dinosaur dies. When a dinosaur dies, all of their active effects end and all cards in their
+					possession are placed in the discard pile. The last dinosaur standing is the winner.
+				</p>
+				</div>
+				<h3>Turn Structure</h3>
+				<div>
+				<p>
+						When a player’s turn begins, if they have fewer than five cards in hand, they may choose to
+						draw until they have up to 5 cards.
+						During a player’s turn, they have two actions. Players may use an action to attach a part card
+						from their hand to their dinosaur, play an effect card from their hand, or discard a card,
+						moving it directly from their hand to the discard pile.
+						Once a player has either used all of their allotted actions, or decided that they do not want to
+						use all of their actions, they may choose to attack an opponent, which will be covered in a
+						later section. If the player has fewer than five cards in hand after attacking (or choosing not
+						to), they may once again draw until they have up to five cards. If a player has more than five
+						cards in hand as their turn ends, they must discard cards until they have five cards in hand.
+				</p>
+				</div>
+				<h3>Building a Terrible Lizard</h3>
+				<div>
+				<p>
+					There are five types of body part, Head, Body, Arms, Legs, and Wings. A player may only have one part
+					of each type attached to their dinosaur at any given time.
+					As said previously, on a players turn, they may spend one action to attach a part from their hand to their dinosaur.
+					The player may replace existing parts currently on their dinosaur. Parts that are replaced are discarded.
+					It does not cost an action to discard parts in this way.
+					While it doesn't technically influence the game, a major part of the fun of Terrible Lizards is physically assembling your dinosaur.
+					Arrange the parts on the table to form your lizard!
+					If your dinosaur has all four parts of a single dinosaur, your dinosaur gets the set bonus of that dinosaur (see "Set Bonsuses").
+				</p>
+				</div>
+				<h3>Attacking</h3>
+				<div>
+				<p>
+					To attack, add the total attack value of all of the parts currently on your dinosaur
+					(indicated by the number next to the claw icon on each part, pictured at right), and
+					choose a dinosaur to attack, then roll the die. Add the number rolled to the previous
+					attack total. Then, subtract the total weight (indicated by the number next to the
+					anvil icon, also at right) of all parts of the defending dinosaur. The resulting number
+					is the amount of damage done. The defending dinosaur loses health equal to the
+					damage dealt. You cannot deal less than zero damage. If the damage dealt would
+					be a negative number, deal zero damage instead.
+				</p>
+				</div>
+				<h3>Effects</h3>
+				<div>
+				<p>
+					When an effect card is played, immediately resolve the text on the card, then place it in the
+					discard pile. If an effect contradicts the rules, follow the instructions of the effect.
+					There are three types of effects: Standard, Quick, and Persistent.
+					Standard effects are tan. Once a standard effect is used, it is immediately discarded. These
+					can only be played on your turn.
+					Quick effects are red, and have the symbol at right in their top left corner. On your
+					turn, you may play a Quick effect just like a standard effect. You may play Quick
+					effects during an opponent’s turn at no cost.
+					Persistent effects are purple, and have the symbol at the right in their top left corner.
+					Once played, these remain on the table, face up and in play. Whatever effect a
+					Persistent effect has takes effect so long as the card is in play. Once it is discarded
+					or leaves your control, the effect ends. A player may may have up to two Persistent
+					effects in play under their control at any given time. A player may replace their Persistent
+					effect with another Persistent effect, in which case the replaced effect will be discarded at no
+					cost. A player may choose to discard one of their Persistent effects from play during their turn.
+					Discarding a Persistent effect from play does not cost an action.
+				</p>
+				</div>
+				<h3>Misc.</h3>
+				<div>
+				<p>
+					If a card is “suppressed”, treat it as if it is not in play until the suppression ends. Once
+					suppression ends, the card returns to play exactly as it was. If this is no longer a legal move
+					(for example, if a Persistent effect was suppressed, then another Persistent effect was played
+					in its place, then the suppression ended, causing three Persistent effects to be simultaneously
+					in play under one player’s control) then one of the conflicting cards must be discarded. The
+					player whose cards conflict may choose which to discard.
+					If the deck runs out during play, shuffle the discard pile and flip it back over. Or, if you prefer,
+					you may also choose to play out the remainder of the game without drawing new cards.
+					Whomever is last in play order is the first person to attack. For example, in a two player
+					game, the player who goes first does not get to attack at the end of their first turn. However,
+					the second player may attack at the end of their first turn. In a three player game, the third
+					player is the first to be able to attack, and in a four player game, the fourth player is the first to
+					be able to attack, etc..
+					Players may only draw cards at the beginning or end of their turn, unless a card indicates
+					otherwise.
+					A player is not required to play any cards on their turn.
+					A player is not required to attack on their turn.
+					If a card gets stolen using another effect card, like Spy-nosaur, it still costs an action.
+					An attack which does no damage is different from an attack that does zero damage. An attack
+					that does zero damage is still considered to have done damage.
+					For example, if you have the
+					Persistent effect Venomous, and your opponent dodges your attack using Wings, they have
+					taken no damage, and thus, Venomous will not take effect. However, if you attack them, and
+					their Weight is high enough that your attack does zero damage, Venomous will take effect.
+					If you play a card in response to another card being played, that card resolves before the card
+					it was played in response to. For example, if your opponent plays Trip on their turn, targeting
+					you, and you play Selective Autotomy in response, Trip doesn’t deal damage to you until after
+					you have resolved Selective Autotomy.
+					You do not have to declare the number of cards you will draw. You may look at each card as
+					you draw it, and decide whether or not to continue drawing cards. For example, you could
+					draw a card, look at it, decide it isn’t as good as you might have hoped, and choose to draw a
+					second card.
+				</p>
+				</div>
+				<h3>Set Bonsuses</h3>
+				<div>
+				<p>
+					Allosaurus – Hatchet Chomp: When you attack, gain health equal to the damage done to
+					your opponent.
+					<br>
+					Velociraptor - Clever Girl: When you attack, roll thrice and use the total as a single roll.
+					<br>
+					Quetzalcoatlus - King of the Sky: Gain 3 attack. When being attacked, if your attacker rolls
+					higher than 3, you take no damage.
+					<br>
+					Spinosaurus - Death roll: When attacking, roll two die. If the second die comes up less than
+					or equal to the first, roll another die. You may repeat this process until you roll higher than the
+					preceding roll. Use the total of all rolls as your attack roll. We’re sorry the word “roll” appears
+					so many times in this paragraph.
+					<br>
+					Dracorix – Rough and Tumble: If your attack deals damage, the target also takes damage
+					equal to their weight.
+					<br>
+					Therizinosaurus - Claw Swipe: Any time your dinosaur attacks an opponent and deals
+					damage, remove a part of your choice from the opponent’s dinosaur.
+					<br>
+					Tyrannosaurus - Apex Predator: Gain 10 attack.
+					<br>
+					Plesiosaurus - Aquatic Hunter: When you attack, act as though your opponent had a weight
+					of 0.
+					<br>
+					Brontomerus - Long neck: You may choose to attack at the end of every turn, even if it is
+					not your turn.
+					<br>
+					Stegosaurus - Thagomizer: Whenever you are attacked, even if you take no damage, your
+					attacker takes 5 damage.
+					<br>
+					Triceratops - Cranial Combatant: When attacking, only take the weight of the defending
+					Dinosaur's head into account when dealing damage.
+					<br>
+					Ankylosaurus - Super armor: Once per turn, when an opponent plays a card, you may
+					choose to send that card to the discard pile. It does not take effect but still costs an action.
+					Additionally, you only take damage from attacks; effect cards cannot damage you.
+					<br>
+					Apatosaurus - Super Heavy Weight: When attacking, calculate damage using your
+					dinosaur’s weight, rather than its attack.
+				</p>
+				</div>
 			</div>
 		</main>
 		<footer>

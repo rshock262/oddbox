@@ -4,6 +4,10 @@
 		<meta charset="utf-8">
 		<title>Contact - OddBox Games</title>
 		<link rel="stylesheet" href="master.css" />
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/additional-methods.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="contact.js"></script>
 	</head>
 	<body>
 			<header>
@@ -21,17 +25,26 @@
 				<h2 class="pageHeading">If you are looking for a deck, or have any
 					questions or comments, we would love to hear from you!
 				</h2>
-				<label for="email">Email: </label>
-				<br>
-				<input type="email" name="email" id="email">
-			</div>
-			<div>
-				<div>
-					<label for="comment">Comment: </label>
-					<br>
-					<textarea rows="4" cols ="50" id="comment"></textarea>
-				</div>
-				<input type="submit" value="Submit">
+					<form id ="commentSubmission" method="get" action="#">
+						<div>
+							<p>
+								<label for="name">Name (required, at least 2 characters): </label>
+								<input type="text" name="name" id="name" minlength="2" required>
+							</p>
+							<p>
+								<label for="email">Email (required): </label>
+								<input type="email" name="email" id="email">
+							</p>
+						</div>
+						<div>
+							<p>
+								<label for="comment">Comment (required): </label>
+								<br>
+								<textarea rows="4" cols ="50" id="comment"></textarea>
+							</p>
+							<input type="submit" value="Submit">
+						</div>
+					</form>
 			</div>
 			<p>
 			If you'd rather send us a message directly, you can email us at
